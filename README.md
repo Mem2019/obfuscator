@@ -35,9 +35,10 @@ ___
 ## Building
 This project is designed to be used on both Linux and Windows, and on any architecture.
 Although you may need to update your compiler/libc++ to the latest version, as we're using some fancy C++23 features.
+For example, you can use [LLVM 18.1.8](https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8) for compilation.
 
 ```commandline
-cmake -B build -DOBFUSCATOR_BUILD_TESTS=0
+cmake -B build -DOBFUSCATOR_BUILD_TESTS=0 -DCMAKE_EXE_LINKER_FLAGS="-lc++"
 cmake --build build --config Release
 ```
 
